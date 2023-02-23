@@ -1,0 +1,126 @@
+.navbarContaner {
+  background: #001d4b;
+
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 5;
+  padding: 15px 0;
+  padding-top: 24px;
+  height: 120px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+}
+.navbar {
+  max-width: 1030px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+.logoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.logo {
+  width: 141px;
+}
+.tagline {
+  font-family: "MuseoModerno", sans-serif;
+  font-size: 16px;
+  color: #fff;
+
+  font-weight: 700;
+}
+.navItems {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.navItem {
+  font-family: "Lato";
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 300;
+  text-decoration: none;
+  line-height: 100%;
+  opacity: 0.9;
+}
+.navItem:focus {
+  color: #fff;
+}
+.hamburger {
+  display: none;
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+}
+.close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+.sidebar {
+  display: none;
+}
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(110%);
+  transition: 1s;
+  padding: 20px;
+  padding-left: 30px;
+  padding-top: 80px;
+  width: 250px;
+  background: #001d4b;
+}
+@media only screen and (max-width: 991px) {
+  .navbar {
+    display: grid;
+    grid-template-columns: 1fr 30px;
+  }
+  .hamburger {
+    display: block;
+  }
+  .navItems {
+    display: none;
+  }
+  .sidebar {
+    transform: translate(0);
+
+    transition: 1s;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .logo {
+    font-size: 40px;
+  }
+  .tagline {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .navbarContaner {
+    height: auto;
+  }
+  .tagline {
+    padding-bottom: 8px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .mobileNav {
+    width: 100%;
+    align-items: center;
+  }
+}

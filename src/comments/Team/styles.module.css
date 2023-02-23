@@ -1,0 +1,102 @@
+.teamContainer {
+  position: relative;
+
+  padding-bottom: 15px;
+  background: url("../../assets/images/teambg.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -2;
+}
+.wrapper {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+.heading {
+  font-family: "MuseoModerno", cursive;
+
+  font-size: 38px;
+  font-weight: 700;
+  text-align: center;
+  color: #ff4040;
+  padding-bottom: 50px;
+}
+.video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 29, 75, 0.72);
+  top: 0;
+  z-index: -1;
+}
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  max-width: 850px;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: center;
+}
+.teamMember {
+  padding: 15px 0;
+}
+.teamMember:nth-child(1) {
+  margin-left: 60px;
+}
+.teamMember:nth-child(4) {
+  margin-right: 60px;
+}
+
+:nth-child(4) .teamMember {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.image {
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 #000;
+}
+.name {
+  font-family: "Lato", sans-serif;
+
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+
+  margin: 0 auto;
+}
+.position {
+  font-family: "Lato", sans-serif;
+
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+  max-width: 100px;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 991px) {
+  .teamMember:nth-child(1) {
+    margin-left: 0px;
+  }
+  .teamMember:nth-child(4) {
+    margin-right: 0px;
+  }
+}

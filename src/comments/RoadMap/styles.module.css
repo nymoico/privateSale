@@ -1,0 +1,97 @@
+.roadmap {
+  position: relative;
+
+  padding: 80px 0;
+  background: url(../../assets/images/roadmapbg.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -2;
+  margin-top: -25px;
+}
+
+.heading {
+  font-family: "MuseoModerno", cursive;
+  font-size: 38px;
+  font-weight: 700;
+  text-align: center;
+  color: #ff4040;
+  padding-bottom: 50px;
+}
+.video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+  object-fit: cover;
+  object-position: center;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(12, 30, 58, 0.8);
+  top: 0;
+  z-index: -1;
+}
+.contents {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 90%;
+  padding-top: 30px;
+  padding-left: 40px;
+}
+.image {
+  max-width: 260px;
+  display: block;
+  height: 100%;
+}
+
+.title {
+  font-family: "Lato", sans-serif;
+
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+}
+.text {
+  font-family: "Lato", sans-serif;
+
+  font-size: 16px;
+  line-height: 160%;
+  color: #fff;
+  font-weight: 300;
+}
+.textContainer {
+  padding-left: 25px;
+}
+
+@media only screen and (max-width: 991px) {
+  .contents {
+    grid-template-columns: repeat(3, auto);
+    gap: 30px;
+  }
+  .images {
+    display: none;
+  }
+  .lineContainer {
+    display: none;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .contents {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .contents {
+    flex-direction: column;
+  }
+}

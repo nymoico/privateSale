@@ -1,0 +1,142 @@
+.icoDetails {
+  background: #001d4b;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.headingContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 850px;
+  width: 70%;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+.heading {
+  font-family: "MuseoModerno", cursive;
+  font-size: 38px;
+  font-weight: 700;
+  text-align: center;
+  color: #ff4040;
+}
+.button {
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  height: 100%;
+  min-height: 10px;
+  min-width: 10px;
+
+  touch-action: manipulation;
+
+  transition: all 0.2s ease, visibility 0s;
+  background: #ed5829;
+  border-radius: 45px;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  color: #fff;
+  padding: 12px 30px;
+}
+.button:hover {
+  background: #001d4b;
+  box-shadow: 4.95px 4.95px 49px #ed5829;
+}
+.textAndValueContainer {
+  max-width: 740px;
+  width: 70%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) auto;
+  justify-content: center;
+}
+.textAndValue {
+  border-left: 1px solid #0057e1;
+  padding: 15px 0;
+  padding-left: 20px;
+}
+
+.textValueWrapper {
+  position: relative;
+}
+.textValueWrapper::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(-40%, 40%);
+  width: 16px;
+  height: 16px;
+  background: #ff4040;
+  border-radius: 50%;
+  z-index: 1;
+}
+.info {
+  padding-top: 30px;
+}
+.info .textAndValue {
+  border: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+.text {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  color: #fff;
+  font-weight: 300;
+}
+.value {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  line-height: 135%;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 767px) {
+  .icoDetailsContainer {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+  }
+  .headingContainer {
+    flex-direction: column;
+    padding-bottom: 100px;
+  }
+  .heading {
+    padding-bottom: 20px;
+  }
+  .textAndValueContainer {
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 100%;
+    padding: 0 15px;
+    gap: 75px 0;
+  }
+  .info {
+    padding: 0;
+    position: relative;
+  }
+  .info::before {
+    content: "";
+    position: absolute;
+    top: -12%;
+    left: -25%;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #ff4040;
+  }
+  .info:first-child::before {
+    background: #0057e1;
+  }
+  .textAndValue {
+    border: none;
+  }
+  .textValueWrapper::before {
+    display: none;
+  }
+}

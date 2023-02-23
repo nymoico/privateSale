@@ -1,0 +1,48 @@
+.takeAllocationContainer {
+  position: relative;
+  background: #1d3354;
+}
+
+.headingContainer {
+  max-width: 1020px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.heading {
+  font-family: "MuseoModerno", cursive;
+  font-size: 38px;
+  font-weight: 700;
+  text-align: right;
+
+  color: #ff4040;
+
+  padding-top: 25px;
+}
+.mobileImage {
+  display: none;
+}
+.image {
+  width: 100%;
+  object-fit: cover;
+  min-height: 280px;
+  height: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+  .headingContainer {
+    display: none;
+  }
+  .image {
+    display: none;
+    min-height: auto;
+  }
+  .mobileImage {
+    display: block;
+  }
+}
