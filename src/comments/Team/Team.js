@@ -11,6 +11,7 @@ import {
   andrew,
   jim,
   fedrik,
+  ouassila
 } from "../../assets/images/images";
 import TeamBg from "../../assets/video/teambg.mp4";
 import styles from "./styles.module.css";
@@ -27,7 +28,7 @@ const Team = () => {
     { img: jora, name: "Jora", position: "Mobile" },
     { img: andrew, name: "X", position: "Ethical Hacker Cybersecurity" },
     { img: jim, name: "Jim Currier", position: "Advisor" },
-    { img: fedrik, name: "Frédéric Bilocq", position: "Advisor" },
+    { img: ouassila, name: "Ouassila Ameous", position: "Social Media Manager" },
   ];
   return (
     <section className={styles.teamContainer}>

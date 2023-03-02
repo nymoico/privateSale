@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./styles.module.css";
 import {
   takeAllocationBg,
-  takeAllocationMobile,
+  tokenallocation,
 } from "../../assets/images/images";
 
 const TokenAlocation = () => {
@@ -11,9 +11,9 @@ const TokenAlocation = () => {
       <div className={styles.headingContainer}>
         <h2 className={styles.heading}>token allocation</h2>
       </div>
-      <img src={takeAllocationBg} alt="#" className={styles.image} />
+      <img src={tokenallocation} alt="#" className={styles.image} />
       <img
-        src={takeAllocationMobile}
+        src={tokenallocation}
         alt="#"
         className={`${styles.image} ${styles.mobileImage}`}
       />

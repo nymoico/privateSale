@@ -14,9 +14,9 @@ const HeroSection = () => {
         <div className={styles.heroSection}>
           <div>
             <p className={styles.text}>
-              Nymo is a groundbreaking blockchain-based platform for
-              remittances, with the aim of empowering those who lack access to
-              traditional banking services.
+              Nymo is a groundbreaking blockchain-based platform for remittances, 
+              with the aim of empowering those who lack access to traditional banking services. 
+              To fully realize and launch our platform, we have decided to conduct an Initial Coin Offering (ICO) to raise the funds necessary to bring Nymo to life.
             </p>
             <p className={styles.text}>
               Regrettably, despite our extensive efforts, we have been unable to

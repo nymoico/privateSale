@@ -10,6 +10,8 @@ import abdel from "./abdel.webp";
 import helene from "./helene.webp";
 import jora from "./zhora.webp";
 import andrew from "./andrew-blank.webp";
+import ouassila from "./ouassila.png"
+import tokenallocation  from "./tokenallocation.png"
 import jim from "./jim.webp";
 import fedrik from "./frederic2.webp";
 import takeAllocationBg from "./tokenAllocation.webp";
@@ -35,4 +37,6 @@ export {
   takeAllocationMobile,
   join,
   logo,
+  ouassila,
+  tokenallocation
 };

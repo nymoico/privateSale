@@ -10,19 +10,19 @@ const Navbar = () => {
   const navItems = [
     {
       item: "Home",
-      to: "/",
+      to: "https://www.nymo.io/",
     },
     {
       item: "About",
-      to: "/",
+      to: "https://www.nymo.io/nymo",
     },
     {
-      item: "Ico",
-      to: "/",
-    },
+      item: "The Unbanked",
+      to: "https://www.nymo.io/theunbanked",
+    },    
     {
       item: "Contact",
-      to: "/",
+      to: "https://www.nymo.io/contact",
     },
   ];
   return (
