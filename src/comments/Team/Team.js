@@ -26,7 +26,7 @@ const Team = () => {
     { img: abdel, name: "Abdel Khan", position: " Business Dev" },
     { img: helene, name: "Hélène Gilles", position: "HR" },
     { img: jora, name: "Jora", position: "Mobile" },
-    { img: andrew, name: "X", position: "Ethical Hacker Cybersecurity" },
+    { img: andrew, name: "X", position: "Ethical Hacker / Cybersecurity" },
     { img: jim, name: "Jim Currier", position: "Advisor" },
     { img: ouassila, name: "Ouassila Ameous", position: "Social Media Manager" },
   ];
