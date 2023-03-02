@@ -45,7 +45,11 @@ const IcoDetails = () => {
     <section className={styles.icoDetails}>
       <div className={styles.headingContainer}>
         <h2 className={styles.heading}>ico details</h2>
-        <button className={styles.button}>Calculate your earnings !</button>
+        <a href="https://nymo.io/calculateyourearnings"
+        rel="noreferrer"
+        target="_blank" 
+          className={styles.button}>Calculate your earnings !
+          </a>
       </div>
       <div className={styles.icoDetailsContainer}>
         <div className={styles.textAndValueContainer}>
