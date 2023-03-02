@@ -19,7 +19,7 @@ import styles from "./styles.module.css";
 const Team = () => {
   const teams = [
     { img: johann, name: "Johann Caubergh", position: "Founder" },
-    { img: kevin, name: "Kevin Ewings", position: " Operationalr" },
+    { img: kevin, name: "Kevin Ewings", position: " Operational" },
     { img: louis, name: "Louis LIbart", position: " Finance" },
     { img: dylan, name: "Dylan Ressan", position: " Cryptonomics" },
     { img: frank, name: "Frank Van Oss", position: " Public Relations" },
