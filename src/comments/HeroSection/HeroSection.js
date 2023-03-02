@@ -34,7 +34,7 @@ const HeroSection = () => {
             <p className={`${styles.countText} ${styles.text}`}>
               PRIVATE SALE STARTS IN
             </p>
-            <CountDown dayCount="April 08 2023 05:30:01" />
+            <CountDown dayCount="March 11 2023 12:00:00" />
           </div>
         </div>
       </div>
