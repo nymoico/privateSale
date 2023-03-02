@@ -45,7 +45,7 @@ const IcoDetails = () => {
     <section className={styles.icoDetails}>
       <div className={styles.headingContainer}>
         <h2 className={styles.heading}>ico details</h2>
-        <button className={styles.button}>determine your earnings !</button>
+        <button className={styles.button}>Calculate your earnings !</button>
       </div>
       <div className={styles.icoDetailsContainer}>
         <div className={styles.textAndValueContainer}>
