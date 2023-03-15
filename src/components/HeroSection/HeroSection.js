@@ -35,7 +35,7 @@ const HeroSection = () => {
             <div className={styles.fast}>
               <img src={fire} alt="#" />
               <span>
-                <span className={styles.text}>PRESALE</span>
+                <span className={styles.text}></span>
                 SELLING FAST
               </span>
             </div>
