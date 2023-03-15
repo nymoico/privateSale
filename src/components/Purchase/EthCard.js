@@ -77,7 +77,6 @@ const EthCard = () => {
             <input
               className={styles.input}
               type="number"
-<<<<<<< HEAD
               min="100"
               value={eth}
               onChange={
@@ -88,18 +87,6 @@ const EthCard = () => {
           </div>{" "}
         </div>
         <p className={styles.value}>{ethNymo} BNB</p>
-=======
-              min="0"
-              value={eth}
-              onChange={(e) => {
-                setEth(e.target.value);
-              }}
-            />{" "}
-            <p className={styles.label}> BNB</p>
-          </div>{" "}
-        </div>
-        <p className={styles.value}>{ethNymo} NYMO</p>
->>>>>>> 97a14d09b91183f98852124984a55169c209cfd9
         <div className={`${styles.inputWrapper}`}>
           <div className={`${styles.inputContainer}`}>
             <input
@@ -107,20 +94,13 @@ const EthCard = () => {
               min="0"
               type="number"
               value={ethNymo}
-<<<<<<< HEAD
               disabled="true"
             />{" "}
             <p className={styles.label}> BNB</p>
-=======
-              onChange={(e) => setEthNymo(e.target.value)}
-            />{" "}
-            <p className={styles.label}> NYMO</p>
->>>>>>> 97a14d09b91183f98852124984a55169c209cfd9
           </div>{" "}
         </div>
 
         <p className={styles.value}>
-<<<<<<< HEAD
           {eth} NYMO = {eth * 0.0008} USDT
         </p>
       </div>{" "}
@@ -130,12 +110,6 @@ const EthCard = () => {
       </button>
       
     </div>
-=======
-          {ethNymo} NYMO = {eth} BNB
-        </p>
-      </div>{" "}
-      <button className={`${styles.button} ${styles.buyButton} `}>Buy</button>
->>>>>>> 97a14d09b91183f98852124984a55169c209cfd9
     </div>
   );
 };

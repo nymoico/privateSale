@@ -57,11 +57,7 @@ const HeroSection = () => {
 
             <div className={styles.next}>
               <div>
-<<<<<<< HEAD
                 <p>$0.008 USDT = 1 NYMO</p>
-=======
-                <p>$0.008 USDT = 1 $NYMO</p>
->>>>>>> 97a14d09b91183f98852124984a55169c209cfd9
               </div>
               {/* next */}
               
