@@ -16,7 +16,7 @@ usdTAmountToast} from "../../toastUtils/toasts";
 
 
 const EthCard = () => {
-  const [eth, setEth] = useState(100);
+  const [eth, setEth] = useState(0);
   const [ethNymo, setEthNymo] = useState(0);
   const [bnbPrice, setBnbPrice] =useState(0);
   const [nymoAmount, setNymoAmount] = useState(0);
@@ -25,9 +25,7 @@ const EthCard = () => {
   const { isConnected, address } = useAccount();
   const { data: signer, isError, } = useSigner()
 
-  const balance = useBalance({
-    address: address,
-  });
+
     
   useEffect(()=>{
 
