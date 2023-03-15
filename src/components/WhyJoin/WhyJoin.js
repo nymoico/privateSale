@@ -35,7 +35,7 @@ const WhyJoin = () => {
           data-aos="fade-up"
           data-aos-duration="2000"
         >
-          Why joining us ?
+          Why join us ?
         </h2>
       </div>
     </section>
