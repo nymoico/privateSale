@@ -35,21 +35,22 @@ const HeroSection = () => {
             <div className={styles.fast}>
               <img src={fire} alt="#" />
               <span>
-                <span className={styles.text}></span>
+                <h3 className={styles.text} style={{fontFamily:"Lato"}}>
                 SELLING FAST
+                </h3>
               </span>
             </div>
           </div>
           <div className={styles.card_body}>
             <div className={styles.card_body_desc}>
               <div className={styles.stage}>
-                <h1>Private Sale</h1>
-                <p>CURRENT STAGE</p>
+                <h1 style={{fontFamily:"Lato"}}>Private Sale</h1>
+                <p style={{fontFamily:"Lato"}}>CURRENT STAGE</p>
               </div>
-              <div className={styles.money}>
+              {/*<div className={styles.money}>
                 <h1>${sold * price}</h1>
                 <p>/ $5.600.000 RAISED</p>
-              </div>
+  </div>*/}
             </div>
             {/* white background sold */}
             <div>
@@ -64,8 +65,8 @@ const HeroSection = () => {
                 </div>
 
                 <div className={styles.solid_left}>
-                  <h1>100%</h1>
-                  <p>REMAINING</p>
+                  <h1 >100%</h1>
+                  <p style={{fontFamily:"Lato"}}>REMAINING</p>
                 </div>
 
                 <div className={styles.animated_bg}>
@@ -76,7 +77,7 @@ const HeroSection = () => {
 
             <div className={styles.next}>
               <div>
-                <p>$0.0008 USDT = 1 NYMO</p>
+                <p style={{fontFamily:"Lato"}}>$0.0008 USDT = 1 NYMO</p>
               </div>
               {/* next */}
               
@@ -89,12 +90,12 @@ const HeroSection = () => {
                     {parseInt(sold["_hex"])}
                     {" "}
 
-                  <span style={{ color: "white" }}>Tokens Sold</span>
+                  <span style={{ color: "white", fontFamily:"Lato" }}>Tokens Sold</span>
                 </span>
               </div>
               <div className={styles.only}>
                 <span>
-                  only <span style={{ color: "#ed5829" }}>{700000000 - sold}</span>{" "}
+                  only <span style={{ color: "#ed5829", fontFamily:"Lato" }}>{700000000 - sold}</span>{" "}
                   tokens remain
                 </span>
               </div>

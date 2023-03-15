@@ -23,7 +23,10 @@ const EthCard = () => {
   const [callAmount, setCallAmount] = useState(0);
 
   const { isConnected, address } = useAccount();
-  const { data: signer, isError, } = useSigner()
+  const { data: signer, isError, } = useSigner();
+  const balance = useBalance({
+    address: address,
+  });
 
 
     
