@@ -22,7 +22,7 @@ const UsdtCard = () => {
           To use our manual converter, please send assets other than BNB to :
         </p>
         <br />
-        <h4>0xA360991E332778c4549Ab657a1Cf1fb3d198F173</h4>
+        <h6>0xA360991E332778c4549Ab657a1Cf1fb3d198F173</h6>
         <br />
         
         <p className={styles.value}>

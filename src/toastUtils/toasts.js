@@ -40,7 +40,7 @@ const approveFailToast = () =>{
 
 const purchaseSuccessToast = (amount) => {
     Toastify({
-    text: `Successfully purchased ${amount} MCADE!`,
+    text: `Successfully purchased ${amount} NYMO!`,
     duration: 6000,
   
     newWindow: true,
@@ -112,9 +112,9 @@ const notEnoughUsdtToast = () => {
   }).showToast()
 
 };
-const notEnoughEthToast = () => {
+const notEnoughBNBToast = () => {
     Toastify({
-        text: `You need more ETH!`,
+        text: `You need more BNB!`,
     duration: 6000,
   
     newWindow: true,
@@ -196,7 +196,7 @@ export {
     errorToast,
     notConnectedToast,
     notEnoughUsdtToast,
-    notEnoughEthToast,
+    notEnoughBNBToast,
     purchaseSuccessToast,
     purchaseFailToast,    
     usdTAmountToast

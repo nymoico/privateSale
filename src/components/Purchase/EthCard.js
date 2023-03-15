@@ -3,6 +3,16 @@ import styles from "./styles.module.css";
 import { ethers } from "ethers";
 import { ICOADDRESS, ICOABI } from "../../contractUtils/contractConfig";
 import { useBalance, useAccount, useSigner, usePrepareContractWrite, useContractWrite } from 'wagmi'
+import {approveSuccessToast,
+approveFailToast,
+ethAmountToast,
+errorToast,
+notConnectedToast,
+notEnoughUsdtToast,
+notEnoughBNBToast,
+purchaseSuccessToast,
+purchaseFailToast,    
+usdTAmountToast} from "../../toastUtils/toasts";
 
 
 const EthCard = () => {
@@ -13,13 +23,16 @@ const EthCard = () => {
   const [callAmount, setCallAmount] = useState(0);
 
   const { isConnected, address } = useAccount();
-  
+  const { data: signer, isError, } = useSigner()
+
   const balance = useBalance({
     address: address,
   });
     
   useEffect(()=>{
 
+    console.log('is connected')
+    console.log(isConnected);
     async function fetchEthPrice() {
     const provider = new ethers.providers.JsonRpcProvider('https://billowing-proud-butterfly.bsc.discover.quiknode.pro/c0cbec7e2023692be00972bc02837556798db23d/')
     const aggregatorV3InterfaceABI = [{ "inputs": [], "name": "decimals", "outputs": [{ "internalType": "uint8", "name": "", "type": "uint8" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "description", "outputs": [{ "internalType": "string", "name": "", "type": "string" }], "stateMutability": "view", "type": "function" }, { "inputs": [{ "internalType": "uint80", "name": "_roundId", "type": "uint80" }], "name": "getRoundData", "outputs": [{ "internalType": "uint80", "name": "roundId", "type": "uint80" }, { "internalType": "int256", "name": "answer", "type": "int256" }, { "internalType": "uint256", "name": "startedAt", "type": "uint256" }, { "internalType": "uint256", "name": "updatedAt", "type": "uint256" }, { "internalType": "uint80", "name": "answeredInRound", "type": "uint80" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "latestRoundData", "outputs": [{ "internalType": "uint80", "name": "roundId", "type": "uint80" }, { "internalType": "int256", "name": "answer", "type": "int256" }, { "internalType": "uint256", "name": "startedAt", "type": "uint256" }, { "internalType": "uint256", "name": "updatedAt", "type": "uint256" }, { "internalType": "uint80", "name": "answeredInRound", "type": "uint80" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "version", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" }]
@@ -47,19 +60,27 @@ const EthCard = () => {
     setEthNymo(parseFloat((ethers.utils.formatUnits(results))).toFixed(6));
 
   }
-
-
-  const { data: signer, isError, } = useSigner()
-
     
-  async function callContract(){
+  const callContract = async() => {
+    console.log('hi')
+     console.log(isConnected)
+      if(!isConnected){
+        notConnectedToast();
+        return
+      }
+
+      if(parseFloat(balance.data?.formatted) < nymoAmount){
+        notEnoughBNBToast();
+        return
+      }
 
       console.log(signer)
       try{
-    const contract = new ethers.Contract(ICOADDRESS,ICOABI,signer)
-    const  tx = contract.buyWithBNB(eth,{value: callAmount})
+      const contract = new ethers.Contract(ICOADDRESS,ICOABI,signer)
+      const  tx = contract.buyWithBNB(eth,{value: callAmount})
     } catch(e){
       console.log(e)
+      errorToast(e);
     }
     }
 
@@ -104,9 +125,9 @@ const EthCard = () => {
           {eth} NYMO = {eth * 0.0008} USDT
         </p>
       </div>{" "}
-      <div>
-      <button className={`${styles.button} ${styles.buyButton} `} onClick={callContract}>
-        buy
+      <div  style={{display:"flex", justifyContent:"center"}} >
+      <button className={`${styles.button} ${styles.buyButton} `}onClick={callContract}>
+        {isConnected? "Buy Tokens" : "Connect Wallet First!"}
       </button>
       
     </div>
