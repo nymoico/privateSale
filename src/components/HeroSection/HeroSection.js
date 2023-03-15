@@ -1,9 +1,28 @@
 import { Web3Button } from "@web3modal/react";
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { fire, positive } from "../../assets/images/images";
 import styles from "./styles.module.css";
+import {ethers} from "ethers";
+import { ICOADDRESS, ICOABI } from "../../contractUtils/contractConfig";
+
+const provider = new ethers.providers.JsonRpcProvider('https://billowing-proud-butterfly.bsc.discover.quiknode.pro/c0cbec7e2023692be00972bc02837556798db23d/')
+const contract = new ethers.Contract(ICOADDRESS,ICOABI,provider);
 
 const HeroSection = () => {
+  const price = 0.0008;
+  const [sold, setSold] = useState(0);
+
+  useEffect(()=> {
+    async function fetchSold(){
+      console.log('sold')
+      console.log(sold)
+      const amount = await contract.totalTokensSold();
+      console.log(amount)
+      setSold(amount);
+    }
+    fetchSold();
+  },[])
+  
   return (
     <section className={styles.heroSectionContaiener}>
       <div
@@ -28,7 +47,7 @@ const HeroSection = () => {
                 <p>CURRENT STAGE</p>
               </div>
               <div className={styles.money}>
-                <h1>$0</h1>
+                <h1>${sold * price}</h1>
                 <p>/ $5.600.000 RAISED</p>
               </div>
             </div>
@@ -57,7 +76,7 @@ const HeroSection = () => {
 
             <div className={styles.next}>
               <div>
-                <p>$0.008 USDT = 1 NYMO</p>
+                <p>$0.0008 USDT = 1 NYMO</p>
               </div>
               {/* next */}
               
@@ -67,13 +86,15 @@ const HeroSection = () => {
             <div className={styles.count}>
               <div className={styles.token}>
                 <span style={{ color: "#00a2ec" }}>
-                  0{" "}
+                    {parseInt(sold["_hex"])}
+                    {" "}
+
                   <span style={{ color: "white" }}>Tokens Sold</span>
                 </span>
               </div>
               <div className={styles.only}>
                 <span>
-                  only <span style={{ color: "#ed5829" }}>700000000</span>{" "}
+                  only <span style={{ color: "#ed5829" }}>{700000000 - sold}</span>{" "}
                   tokens remain
                 </span>
               </div>
