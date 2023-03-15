@@ -10,6 +10,9 @@ import { EthereumClient,w3mConnectors, w3mProvider } from "@web3modal/ethereum";
 import {bsc,bscTestnet} from 'wagmi/chains'
 import { Web3Modal } from "@web3modal/react";
 
+import "toastify-js/src/toastify.css";
+
+
 // Configure chains & providers with the Alchemy provider.
 // Two popular providers are Alchemy (alchemy.com) and Infura (infura.io)
 const projectID = '775c78504d00b798fba3744c24ca8f2e'
