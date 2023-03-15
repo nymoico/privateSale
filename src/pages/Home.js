@@ -1,17 +1,19 @@
 import React from "react";
 
-import HeroSection from "../comments/HeroSection/HeroSection";
-import IcoDetails from "../comments/Ico-details/IcoDetails";
-import RoadMap from "../comments/RoadMap/RoadMap";
-import Team from "../comments/Team/Team";
-import TokenAlocation from "../comments/TokenAlocation/TokenAlocation";
+import HeroSection from "../components/HeroSection/HeroSection";
+import IcoDetails from "../components/Ico-details/IcoDetails";
+import Purchase from "../components/Purchase/Purchase";
+import RoadMap from "../components/RoadMap/RoadMap";
+import Team from "../components/Team/Team";
+import TokenAlocation from "../components/TokenAlocation/TokenAlocation";
 
-import WhyJoin from "../comments/WhyJoin/WhyJoin";
+import WhyJoin from "../components/WhyJoin/WhyJoin";
 
 const Home = () => {
   return (
     <>
       <HeroSection />
+      <Purchase />
       <WhyJoin />
       <IcoDetails />
       <TokenAlocation />

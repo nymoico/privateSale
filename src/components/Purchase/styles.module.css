@@ -1,0 +1,187 @@
+.purchasingContainer {
+  font-family: "MuseoModerno", cursive;
+  font-weight: normal;
+  /* background: url(../../assets/images/purchasingbg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; */
+  background: #1d3354;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-family: "MuseoModerno", cursive;
+  font-size: 38px;
+  font-weight: 700;
+  text-align: center;
+  color: #ff4040;
+}
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 25px 0;
+}
+.button {
+  font-size: 18px;
+  color: #fff;
+  transition: 0.3s;
+  padding: 12px 25px;
+  border: none;
+  outline: none;
+  border-radius: 14px;
+
+  cursor: pointer;
+
+  background-color: #009eff;
+}
+
+.claimable {
+  background-color: #ff0000;
+}
+.buyButton {
+  background: #00fff6;
+  color: #000;
+}
+.buyEth .buyButton {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  align-self: flex-end;
+}
+.ethCard .buyButton {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  align-self: flex-end;
+}
+
+.button:hover {
+  opacity: 0.9;
+  transition: 0.3s;
+}
+
+.usdtCard {
+  background-color: #ff0000;
+  border-radius: 14px;
+}
+.ethCard {
+  background-color: #001d4b;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.buyEth {
+  background: #ed5829;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+  border-radius: 14px;
+}
+
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 15px;
+}
+.cardTitle {
+  padding: 20px;
+  width: 100%;
+  font-size: 24px;
+  color: #fff;
+  padding: 20px 15px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 14px 14px 0 0;
+}
+
+.card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 15px;
+}
+.buyEth .card {
+  padding: 5px;
+}
+.inputContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  background: #fff;
+  border-radius: 14px;
+
+  position: relative;
+}
+.inputWrapper {
+  position: relative;
+}
+/* .inputWrapper::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 1);
+  top: 5px;
+  left: 5px;
+  z-index: -1;
+} */
+.input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: right;
+  padding: 6px 10px;
+  background: transparent;
+}
+.label {
+  color: rgba(153, 153, 153, 0.8);
+  font-size: 20px;
+  padding-right: 10px;
+  width: 85px;
+}
+.value {
+  color: #fff;
+  font-size: 16px;
+}
+.value::marker {
+  color: #f6c929;
+}
+.buttonWrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.textContaner {
+  width: 100%;
+}
+
+@media only screen and (max-width: 520px) {
+  .buttonContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .button {
+    padding: 10px 16px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .buttonWrapper {
+    grid-template-columns: 1fr;
+  }
+  .cardContainer {
+    display: flex;
+    flex-direction: column;
+  }
+}

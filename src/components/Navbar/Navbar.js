@@ -1,3 +1,4 @@
+import { Web3Button } from "@web3modal/react";
 import React, { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { TfiClose } from "react-icons/tfi";
@@ -42,6 +43,7 @@ const Navbar = () => {
                 {el.item}
               </Link>
             ))}
+            <Web3Button/>
           </div>
         )}
         <div className={`${styles.mobileNav} ${sidebar && styles.sidebar}`}>
@@ -60,8 +62,11 @@ const Navbar = () => {
             >
               {el.item}
             </Link>
+            
           ))}
+          <Web3Button/>
         </div>
+        
       </div>
       <div className={styles.navbar}>
         <p className={styles.tagline}>

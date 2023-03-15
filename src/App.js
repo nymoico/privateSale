@@ -1,11 +1,27 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Navbar from "./comments/Navbar/Navbar";
-import Footer from "./comments/Footer/Footer";
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
+import { configureChains, createClient } from "wagmi";
+import { EthereumClient,w3mConnectors, w3mProvider } from "@web3modal/ethereum";
+import { goerli } from "wagmi";
+import {bsc} from 'wagmi/chains'
+import { Web3Modal } from "@web3modal/react";
+
+// Configure chains & providers with the Alchemy provider.
+// Two popular providers are Alchemy (alchemy.com) and Infura (infura.io)
+const projectID = '775c78504d00b798fba3744c24ca8f2e'
+
+const {provider} = configureChains([goerli],[w3mProvider({projectID})])
+const wagmiClient = createClient({
+  autoConnect:true,
+  connectors:w3mConnectors({projectID,version:1,bsc}),
+  provider
+})
+const ethereumClient = new EthereumClient(wagmiClient,[bsc])
 
 function App() {
   useEffect(() => {
@@ -16,7 +32,12 @@ function App() {
       easing: "ease",
     });
   });
+
+
+
   return (
+    <>
+    <wagmiClient client={wagmiClient}>
     <BrowserRouter>
       <Navbar />
       <Routes>
@@ -24,6 +45,9 @@ function App() {
       </Routes>
       <Footer />
     </BrowserRouter>
+    </wagmiClient>
+    <Web3Modal projectId={projectID} ethereumClient={ethereumClient}/>
+    </>
   );
 }
 

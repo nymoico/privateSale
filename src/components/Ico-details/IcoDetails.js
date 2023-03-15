@@ -12,7 +12,6 @@ const IcoDetails = () => {
       startTime: "9:00AM GMT",
       endDate: "March 20, 2023",
       endTime: "11:00AM GMT",
-      softCap: 168,
       Hardcap: 840,
       to: "",
     },
@@ -24,7 +23,6 @@ const IcoDetails = () => {
       startTime: "11:00AM GMT",
       endDate: "June 15, 2023",
       endTime: "11:00AM GMT",
-      softCap: 405,
       Hardcap: 945,
       to: "",
     },
@@ -36,7 +34,6 @@ const IcoDetails = () => {
       startTime: "11:00AM GMT",
       endDate: "July 31, 2023",
       endTime: "11:00AM GMT",
-      softCap: 1560,
       Hardcap: 3640,
       to: "",
     },
@@ -96,12 +93,7 @@ const IcoDetails = () => {
                 <p className={styles.text}>{el.endDate}</p>
                 <p className={styles.text}>{el.endTime}</p>
               </div>
-              <div className={styles.textAndValue}>
-                <p className={styles.value}>Softcap</p>
-                <p className={styles.text}>
-                  {el.softCap.toFixed(2).toLocaleString("en-us")}$
-                </p>
-              </div>
+             
               <div className={styles.textAndValue}>
                 <p className={styles.value}>Hardcap</p>
                 <p className={styles.text}>{el.startDate}</p>
