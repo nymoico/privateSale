@@ -33,7 +33,7 @@ const Purchase = () => {
     <div className={styles.purchasingContainer}
     id="buyEthCard"
     >
-      <h2 className={styles.title}> Buy BNB Here</h2>
+      <h2 className={styles.title}> Buy NYMO Here</h2>
       <div className={styles.buttonContainer}>
         {/* <button className={`${styles.button} ${styles.connectWallet} `}>
           {" "}
