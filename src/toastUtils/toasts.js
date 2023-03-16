@@ -171,7 +171,7 @@ const usdTAmountToast = (amount) => {
 
 const errorToast = (e) => {
     Toastify({
-        text: e.message,
+        text: "Something went wrong!",
     duration: 6000,
   
     newWindow: true,

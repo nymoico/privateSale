@@ -101,12 +101,15 @@ const HeroSection = () => {
               </div>
             </div>
             <button
+            onClick={()=> document.getElementById('buyEthCard').scrollIntoView()}
               type="button"
               className={`${styles.button} ${styles.pixelated_corners_sm}`}
             >
               Buy tokens
             </button>
+            <a href ="https://www.nymo.io/howtobuy">  
             <p className={styles.buy}>How to buy?</p>
+            </a>
           </div>
         </div>
       </div>

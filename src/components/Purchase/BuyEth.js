@@ -7,7 +7,7 @@ const BuyEth = () => {
     "Choose payment method",
     "Complete KYC details",
     "Complete ID verification",
-    "Purchase ETH",
+    "Purchase BNB",
   ];
   return (
     <div

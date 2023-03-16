@@ -30,8 +30,10 @@ const Purchase = () => {
     getClaimable()
   },[])
   return (
-    <div className={styles.purchasingContainer}>
-      <h2 className={styles.title}> Buy $ETH Here</h2>
+    <div className={styles.purchasingContainer}
+    id="buyEthCard"
+    >
+      <h2 className={styles.title}> Buy BNB Here</h2>
       <div className={styles.buttonContainer}>
         {/* <button className={`${styles.button} ${styles.connectWallet} `}>
           {" "}

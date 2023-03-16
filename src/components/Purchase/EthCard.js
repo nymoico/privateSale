@@ -80,8 +80,10 @@ const EthCard = () => {
       const contract = new ethers.Contract(ICOADDRESS,ICOABI,signer)
       const  tx = contract.buyWithBNB(eth,{value: callAmount})
     } catch(e){
-      console.log(e)
-      errorToast(e);
+      console.log('DEBUG')
+      console.log(e.message)
+      console.log('--------')
+      errorToast("Something went wrong");
     }
     }
 
