@@ -59,13 +59,13 @@ const HeroSection = () => {
                   <img src={positive} alt="" />
                   <div>
                     <span className={styles.solid_text}>
-                      0% <span style={{ color: "#ed5829" }}>SOLD</span>
+                      1% <span style={{ color: "#ed5829" }}>SOLD</span>
                     </span>
                   </div>
                 </div>
 
                 <div className={styles.solid_left}>
-                  <h1 >100%</h1>
+                  <h1 >99%</h1>
                   <p style={{fontFamily:"Lato"}}>REMAINING</p>
                 </div>
 
