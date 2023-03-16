@@ -74,7 +74,7 @@ const EthCard = () => {
         try{
         console.log(eth);
         const contract = new ethers.Contract(ICOADDRESS,ICOABI,signer);
-        const amount = Math.floor(eth*1.15);
+        const amount = Math.floor(eth*1.05);
         console.log(amount);
         console.log(typeof amount);
         const callAmount = await contract.bnbBuyHelper(amount);
