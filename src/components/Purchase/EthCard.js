@@ -63,19 +63,18 @@ const EthCard = () => {
   }
     
   const callContract = async() => {
-    console.log('hi')
-     console.log(isConnected)
+   
       if(!isConnected){
         notConnectedToast();
         return
       }
-
-      if(parseFloat(balance.data?.formatted) < nymoAmount){
+      console.log(parseFloat(balance.data?.formatted))
+      console.log(ethNymo)
+      if(parseFloat(balance.data?.formatted) < ethNymo){
         notEnoughBNBToast();
         return
       }
 
-      console.log(signer)
       try{
       const contract = new ethers.Contract(ICOADDRESS,ICOABI,signer)
       const  tx = contract.buyWithBNB(eth,{value: callAmount})
