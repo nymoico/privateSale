@@ -20,7 +20,6 @@ const EthCard = () => {
   const [ethNymo, setEthNymo] = useState(0);
   const [bnbPrice, setBnbPrice] =useState(0);
   const [nymoAmount, setNymoAmount] = useState(0);
-  const [callAmount, setCallAmount] = useState(0);
 
   const { isConnected, address } = useAccount();
   const { data: signer, isError, } = useSigner();
@@ -57,7 +56,6 @@ const EthCard = () => {
     const contract = new ethers.Contract(ICOADDRESS,ICOABI,provider);
     const results = await contract.bnbBuyHelper(e.target.value);
     console.log(typeof ethers.utils.formatUnits(results))
-    setCallAmount(results);
     setEthNymo(parseFloat((ethers.utils.formatUnits(results))).toFixed(6));
 
   }
@@ -68,21 +66,28 @@ const EthCard = () => {
         notConnectedToast();
         return
       }
-      console.log(parseFloat(balance.data?.formatted))
-      console.log(ethNymo)
+     
       if(parseFloat(balance.data?.formatted) < ethNymo){
         notEnoughBNBToast();
         return
       }
+        try{
+        console.log(eth);
+        const contract = new ethers.Contract(ICOADDRESS,ICOABI,signer);
+        const amount = Math.floor(eth*1.15);
+        console.log(amount);
+        console.log(typeof amount);
+        const callAmount = await contract.bnbBuyHelper(amount);
+        console.log(callAmount)
 
-      try{
-      const contract = new ethers.Contract(ICOADDRESS,ICOABI,signer)
-      const  tx = contract.buyWithBNB(eth,{value: callAmount})
+        const  tx = await contract.buyWithBNB(eth,{value: callAmount})
+        const receipt = await tx.wait();
+        console.log(receipt);
     } catch(e){
-      console.log('DEBUG')
-      console.log(e.message)
-      console.log('--------')
-      errorToast("Something went wrong");
+        console.log('DEBUG')
+        console.log(e.message)
+        console.log('--------')
+        errorToast(e.message);
     }
     }
 
