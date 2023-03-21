@@ -1,4 +1,3 @@
-import { Web3Button } from "@web3modal/react";
 import React, {useEffect, useState} from "react";
 import { fire, positive } from "../../assets/images/images";
 import styles from "./styles.module.css";
@@ -14,8 +13,7 @@ const HeroSection = () => {
 
   useEffect(()=> {
     async function fetchSold(){
-      console.log('sold')
-      console.log(sold)
+     
       const amount = await contract.totalTokensSold();
       console.log(amount)
       setSold(amount);
@@ -46,6 +44,10 @@ const HeroSection = () => {
               <div className={styles.stage}>
                 <h1 style={{fontFamily:"Lato"}}>Private Sale</h1>
                 <p style={{fontFamily:"Lato"}}>CURRENT STAGE</p>
+              </div>
+              <div className={styles.stage}>
+                <h1 style={{fontFamily:"Lato"}}>Softcap</h1>
+                <p style={{fontFamily:"Lato", fontWeight:"800"}}>$156.000,-</p>
               </div>
               {/*<div className={styles.money}>
                 <h1>${sold * price}</h1>
