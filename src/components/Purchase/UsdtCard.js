@@ -21,7 +21,7 @@ const UsdtCard = () => {
         <div style ={{display:"flex", justifyContent:"center"}}>
         <p  style ={{marginLeft:"25px", fontFamily:"Lato"}}className={styles.value}>
           Due to the depegging of USDC, we are currently not accepting oracleized stable assets. 
-          To use our manual converter, please send assets other than BNB to :
+          To use ETH, USDT, USDC or other currencies, you can use our manual converter and bridging address, please send assets other than BNB to :
         </p>
         </div>
         <br />
@@ -29,7 +29,7 @@ const UsdtCard = () => {
         <br />
         
         <p  style ={{marginLeft:"25px", fontFamily:"Lato"}} className={styles.value}>
-          We will manually convert them to NYMO.
+          We will manually bridge and convert them to NYMO.
         </p>
       </div>
   );
