@@ -3,15 +3,12 @@ import {
   johann,
   kevin,
   louis,
-  dylan,
   frank,
   abdel,
   helene,
   jora,
   andrew,
   jim,
-  fedrik,
-  ouassila
 } from "../../assets/images/images";
 import TeamBg from "../../assets/video/teambg.mp4";
 import styles from "./styles.module.css";
@@ -21,14 +18,12 @@ const Team = () => {
     { img: johann, name: "Johann Caubergh", position: "Founder" },
     { img: kevin, name: "Kevin Ewings", position: " Operational" },
     { img: louis, name: "Louis LIbart", position: " Finance" },
-    { img: dylan, name: "Dylan Ressan", position: " Cryptonomics" },
     { img: frank, name: "Frank Van Oss", position: " Public Relations" },
     { img: abdel, name: "Abdel Khan", position: " Business Dev" },
     { img: helene, name: "Hélène Gilles", position: "HR" },
     { img: jora, name: "Jora", position: "Mobile" },
     { img: andrew, name: "X", position: "Ethical Hacker / Cybersecurity" },
     { img: jim, name: "Jim Currier", position: "Advisor" },
-    { img: ouassila, name: "Ouassila Ameous", position: "Social Media Manager" },
   ];
   return (
     <section className={styles.teamContainer}>
