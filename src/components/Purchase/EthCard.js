@@ -1,3 +1,5 @@
+import { Web3Button } from "@web3modal/react";
+
 import React, { useEffect, useState } from "react";
 import styles from "./styles.module.css";
 import { ethers } from "ethers";
@@ -134,7 +136,10 @@ const EthCard = () => {
       </div>{" "}
       <div  style={{display:"flex", justifyContent:"center"}} >
       <button className={`${styles.button} ${styles.buyButton} `}onClick={callContract}>
-        {isConnected? "Buy Tokens" : "Connect Wallet First!"}
+        {isConnected?            
+        "Buy Tokens" 
+        :
+        <Web3Button />}
       </button>
       
     </div>
