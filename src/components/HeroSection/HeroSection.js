@@ -34,7 +34,7 @@ const HeroSection = () => {
               <img src={fire} alt="#" />
               <span>
                 <h3 className={styles.text} style={{fontFamily:"Lato"}}>
-                SELLING FAST
+                PRIVATE SALE STARTED
                 </h3>
               </span>
             </div>
